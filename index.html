@@ -23,7 +23,7 @@
         <div class="flex-1"></div>
         <div class="menu">
           <div class="menu_item">
-            <span>회사소개</span>
+            <span class="item_category">회사소개</span>
             <div class="item_board">
               <ul class="board">
                 <li>회사소개</li>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="menu_item">
-            <span>사업분야</span>
+            <span class="item_category">사업분야</span>
             <div class="item_board">
               <ul class="board">
                 <li>인공지능 군중 계수기</li>
@@ -45,11 +45,12 @@
                 <li>인공지능 용접 모니터링</li>
                 <li>인공지능 수면/학습 도우미</li>
                 <li>인공지능 층견/층간 소음방지</li>
+                <li>인공지능 슬러지 모니터링</li>
               </ul>
             </div>
           </div>
           <div class="menu_item">
-            <span>서비스 현황</span>
+            <span class="item_category">서비스 현황</span>
             <div class="item_board">
               <ul class="board">
                 <li>설치사례</li>
@@ -58,7 +59,7 @@
             </div>
           </div>
           <div class="menu_item">
-            <span>고객마당</span>
+            <span class="item_category">고객마당</span>
             <div class="item_board">
               <ul class="board">
                 <li>공지 및 활동사항</li>
@@ -80,18 +81,24 @@
           <div class="swiper auto-swiper mySwiperr">
             <div class="swiper-wrapper">
               <div class="swiper-slide auto-slide">
-                <p class="swiper_title1">KIOT</p>
-                <p class="swiper_title2">인공지능 AI기술의 선두주자</p>
+                <div class="swiper_title">
+                  <p class="swiper_title1" style="letter-spacing: 5px;">(주)KIOT</p>
+                  <p class="swiper_title2">인공지능 AI기술의 선두주자</p>
+                </div>
                 <img src="./img/renew22.jpg" class="main_img">
               </div>
               <div class="swiper-slide auto-slide">
-                <p class="swiper_title1">고도의 기술력</p>
-                <p class="swiper_title2">객체인식을 90%이상의 정확성</p>
+                <div class="swiper_title">
+                  <p class="swiper_title1">고도의 기술력</p>
+                  <p class="swiper_title2">객체인식을 90%이상의 정확성</p>
+                </div>
                 <img src="./img/renew11.jpg" class="main_img">
               </div>
               <div class="swiper-slide auto-slide">
-                <p class="swiper_title1">만족하는 결과</p>
-                <p class="swiper_title2">기업과 고객간의 높은 신뢰</p>
+                <div class="swiper_title">
+                  <p class="swiper_title1">만족하는 결과</p>
+                  <p class="swiper_title2">기업과 고객간의 높은 신뢰</p>
+                </div>
                 <img src="./img/renew21.jpg" class="main_img">
               </div>
             </div>
@@ -427,6 +434,7 @@
   <script>
     var auto = new Swiper('.mySwiperr', {
       // spaceBetween: 30,
+      loop: true,
       centeredSlides: true,
       autoplay: {
         delay: 2500,
@@ -440,6 +448,12 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      on: {
+        slideChange: function() {
+          $('.index_btn').removeClass('active');
+          $('.index_btn').eq(this.realIndex).addClass('active')
+        }
+      }
     });
   </script>
 

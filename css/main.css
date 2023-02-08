@@ -4,7 +4,7 @@
   height: 5rem;
   position: fixed;
   top: 0;
-  background-color: #e59866;
+  background-color: #fff;
   z-index: 9;
 }
 
@@ -38,21 +38,8 @@
   position: relative;
 }
 
-.main_section:nth-child(1) {
-  background-color: #f5b7b1;
-}
-
-.main_section:nth-child(2) {
-  background-color: #d2b4de;
-}
-
-.main_section:nth-child(3) {
-  background-color: #aed6f1;
-}
-
 .main_section:nth-child(4) {
   padding-bottom: 17rem;
-  background-color: #fff;
 }
 
 .section_item {
@@ -130,20 +117,14 @@ body > div.point > .page_act {
   height: 48px;
 }
 
-.menu_item:nth-child(1) {
-  background-color: #d2b4de;
+.menu_item:hover {
+  height: 48px;
+  border-bottom: 2px solid #c30d23;
 }
 
-.menu_item:nth-child(2) {
-  background-color: #a2d9ce;
-}
-
-.menu_item:nth-child(3) {
-  background-color: #b2babb;
-}
-
-.menu_item:nth-child(4) {
-  background-color: darkkhaki;
+.item_category:hover {
+  color: #c30d23;
+  font-weight: 700;
 }
 
 .item_board {
@@ -153,7 +134,6 @@ body > div.point > .page_act {
   position: absolute;
   transform: translateX(-50%);
   display: none;
-  background-color: aliceblue;
 }
 
 .item_board > ul {
@@ -163,8 +143,16 @@ body > div.point > .page_act {
 }
 
 .board li {
+  width: 100%;
+  padding: 1.0625rem 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   font-size: 16px;
+}
+
+.board li:hover {
+  color: #c30d23;
 }
 
 .board_act {
@@ -227,6 +215,27 @@ body > div.point > .page_act {
   object-fit: cover;
 }
 /* 섹션-1 AutoPlay END */
+.swiper_title {
+  width: 100%;
+  top: 35%;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+/* .swiper_title p {
+  text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333;
+} */
+
+.swiper_title1 {
+  margin-bottom: 3%;
+}
+
 .swiper_btn {
   width: 100%;
   position: absolute;
@@ -258,6 +267,10 @@ body > div.point > .page_act {
 .index_btn:hover {
   border: 3px solid #fff;
   color: #fff;
+}
+
+.index_btn.active {
+  border: 3px solid #fdd835;
 }
 
 .scroll-downs {
