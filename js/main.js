@@ -1,5 +1,5 @@
 const HEADER_HEIGHT = 80; // 헤더 높이 설정
-const FOOTER_HEIGHT = '17rem'; // 푸터 높이 설정
+const FOOTER_HEIGHT = "17rem" // 푸터 높이 설정
 let pageLength; // 페이지 수 초기화
 let flag = true;
 let curPage = 1; // 현재 페이지 초기화 1
