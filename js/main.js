@@ -17,7 +17,7 @@ function pageStart() {
   } else {
     wheelAct(); // PC 휠 이벤트
   }
-  pointClick();
+  pointClick(); // 화면 우측 포인트 클릭시 페이지 이동
 }
 
 function isMobile() {
@@ -91,7 +91,7 @@ function screenMove(mouseVal) {
       curPage++;
       pageMove(pageLength);
     }
-  } else {
+  } else if(mouseVal < 0) {
     if (!(curPage <= 1)) {
       curPage--;
       pageMove(pageLength);
