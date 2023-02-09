@@ -1,7 +1,8 @@
 const HEADER_HEIGHT = 80; // 헤더 높이 설정
 const FOOTER_HEIGHT = '17rem'; // 푸터 높이 설정
 let pageLength; // 페이지 수 초기화
-let flag = true;
+let flag = true; // 페이지 이동 이벤트 제한 true : 이동가능 | false : 이동불가능
+const PAGE_LIMIT = 500; // 페이지 이동 제한 시간 설정
 let curPage = 1; // 현재 페이지 초기화 1
 
 $(function () {
@@ -99,7 +100,7 @@ function screenMove(mouseVal) {
   }
   setTimeout(() => {
     flag = true;
-  }, 1000);
+  }, PAGE_LIMIT);
 }
 
 // ---- 헤더 아코디언 js START ----

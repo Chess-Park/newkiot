@@ -1,3 +1,15 @@
+:root {
+  --color-blue: #05305c;
+  --color-red: #c30d23;
+  --color-green: #26a69a;
+  --color-yellow: #ffee58;
+
+  --color-back-ground: #607d8b; /*right-bh color*/
+  --color-white: #fff;
+  --color-white-gray: #f2f3f4; /*page point color*/
+  --swiper-theme-color: var(--color-blue) !important; /*swiper overwrite*/
+}
+
 /* --- 레이아웃 START --- */
 body {
   font-family: 'Noto Sans KR', Nanum_BG, Nanum_BGB, NanumBarunGothicBold, 나눔고딕, '맑은 고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
@@ -7,7 +19,7 @@ body {
   height: 5rem;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: var(--color-white);
   z-index: 9;
 }
 
@@ -32,7 +44,7 @@ body {
   position: fixed;
   background-color: #333;
   opacity: 0;
-  transition: all ease 1000ms;
+  transition: all ease-in-out 1000ms;
 }
 
 .main_section {
@@ -62,20 +74,25 @@ body {
   transform: translate(0%, -50%);
   margin: 3rem 1rem 0 0;
   cursor: pointer;
+  z-index: 9;
 }
 
 .point_page {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: #607d8b;
+  background-color: var(--color-white-gray);
   margin-bottom: 10px;
+  transition: all ease 500ms;
 }
 
 body > div.point > .page_act {
-  background-color: red !important;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-red) !important;
 }
+
 /* --- 레이아웃 END --- */
 
 /* --- 헤더 START --- */
@@ -107,6 +124,7 @@ body > div.point > .page_act {
   height: 100%;
   position: relative;
   font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -144,8 +162,13 @@ body > div.point > .page_act {
 }
 
 .item_category:hover {
-  color: #c30d23;
-  font-weight: 700;
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.item_category:hover {
+  color: var(--color-red);
+  font-weight: bold;
 }
 
 .item_board {
@@ -174,7 +197,7 @@ body > div.point > .page_act {
 }
 
 .board li:hover {
-  color: #c30d23;
+  color: var(--color-red);
 }
 
 .board_act {
@@ -187,6 +210,7 @@ body > div.point > .page_act {
     margin-left: 0;
   }
 }
+
 /* --- 헤더 END --- */
 
 /* --- 섹션 공통부분 START --- */
@@ -208,7 +232,7 @@ body > div.point > .page_act {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #607d8b;
+  background-color: var(--color-back-ground);
   opacity: 0.4;
 }
 
@@ -224,7 +248,7 @@ body > div.point > .page_act {
 .auto-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,11 +260,12 @@ body > div.point > .page_act {
   height: 100%;
   object-fit: cover;
 }
+
 /* 섹션-1 AutoPlay END */
 .swiper_title {
   width: 100%;
   top: 35%;
-  color: #fff;
+  color: var(--color-white);
   font-size: 3em;
   font-weight: bold;
   display: flex;
@@ -262,7 +287,7 @@ body > div.point > .page_act {
   width: 100%;
   position: absolute;
   z-index: 9;
-  color: #fff !important;
+  color: var(--color-white) !important;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -280,20 +305,19 @@ body > div.point > .page_act {
 .index_btn {
   width: 200px;
   height: 48px;
-  border: 3px solid #43403f;
+  border: 3px solid var(--color-blue);
   background: rgba(255, 255, 255, 0.25);
   line-height: 43px;
-  color: #43403f !important;
+  color: var(--color-white) !important;
 }
 
 .index_btn:hover {
-  border: 3px solid #fff;
-  color: #fff !important;
+  border: 3px solid var(--color-white);
+  color: var(--color-white);
 }
 
 .index_btn.active {
-  border: 3px solid #c30d23;
-  color: #05305c !important;
+  border: 3px solid var(--color-green);
 }
 
 .scroll-downs {
@@ -307,25 +331,28 @@ body > div.point > .page_act {
   height: 55px;
   z-index: 9999;
 }
+
 .mousey {
   width: 3px;
   padding: 10px 15px;
   height: 35px;
-  border: 3px solid #fff;
+  border: 3px solid var(--color-white);
   border-radius: 25px;
   opacity: 1.75;
   box-sizing: content-box;
 }
+
 #scroller {
   width: 3px;
   height: 11px;
   border-radius: 25%;
-  background-color: #fff;
+  background-color: var(--color-white);
   animation-name: scroll;
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.15, 0.41, 1.69, 0.94);
   animation-iteration-count: infinite;
 }
+
 @keyframes scroll {
   0% {
     opacity: 0;
@@ -339,6 +366,7 @@ body > div.point > .page_act {
     opacity: 0;
   }
 }
+
 /* --- 섹션-1  END --- */
 
 /* --- 섹션-2  START --- */
@@ -348,6 +376,7 @@ body > div.point > .page_act {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 65px;
   position: relative;
 }
@@ -358,14 +387,14 @@ body > div.point > .page_act {
   justify-content: center;
   align-items: center;
   gap: 45px;
-  color: #fff;
+  color: var(--color-white);
   margin-top: 10%;
 }
 
 .info_title {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .info_title2 {
@@ -379,9 +408,8 @@ body > div.point > .page_act {
 }
 
 .info_btn {
-  border: 2.5px solid #fff;
+  border: 2.5px solid var(--color-white);
   font-size: 1.125rem;
-  font-weight: 500;
   cursor: pointer;
   padding: 12px 22px;
   text-align: center;
@@ -389,8 +417,8 @@ body > div.point > .page_act {
 }
 
 .info_btn:hover {
-  border: 2.5px solid #ccff00;
-  color: #ccff00;
+  border: 2.5px solid var(--color-yellow);
+  color: var(--color-yellow);
 }
 
 /* 상담문의, 홍보영상, 보도자료 버튼 효과 START */
@@ -407,6 +435,7 @@ body > div.point > .page_act {
   position: relative;
   font-size: 16px;
   font-family: HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+  font-weight: bold;
   /* margin-top: 38rem; */
   /* top: 50%; */
 }
@@ -424,7 +453,7 @@ body > div.point > .page_act {
   stroke-width: 6px;
   fill: transparent;
   /* stroke: #009ffd; */
-  stroke: #0126fa;
+  stroke: var(--color-blue);
   stroke-dasharray: 85 400;
   stroke-dashoffset: -220;
   transition: 1s all ease;
@@ -442,7 +471,7 @@ body > div.point > .page_act {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   font-weight: 100;
 }
@@ -453,7 +482,7 @@ body > div.point > .page_act {
   stroke-width: 6px;
   stroke-dashoffset: 0;
   /* stroke: #06d6a0; */
-  stroke: #ccff00;
+  stroke: var(--color-green);
   /* animation: dash 2s linear; */
 }
 
@@ -463,7 +492,7 @@ body > div.point > .page_act {
   stroke-width: 6px;
   stroke-dashoffset: 0;
   /* stroke: #06d6a0; */
-  stroke: #ccff00;
+  stroke: var(--color-yellow);
   /* animation: dash 2s linear; */
 }
 
@@ -482,6 +511,7 @@ body > div.point > .page_act {
 .info_icon > img {
   width: 23px;
 }
+
 /* 상담문의, 홍보영상, 보도자료 버튼 효과 END */
 /* --- 섹션-2  END --- */
 
@@ -503,7 +533,7 @@ body > div.point > .page_act {
   justify-content: center;
   align-items: center;
   gap: 45px;
-  color: #fff;
+  color: var(--color-white);
   margin-top: 10%;
 }
 
@@ -522,8 +552,8 @@ body > div.point > .page_act {
 .business_item {
   width: 100%;
   position: relative;
-  color: #fff;
-  font-size: 21px;
+  color: var(--color-white);
+  font-size: 25px;
   font-weight: 600;
   display: flex;
   flex-direction: row;
@@ -539,7 +569,7 @@ body > div.point > .page_act {
 }
 
 .b_item_line {
-  border: 1px solid #fdd835;
+  border: 1px solid var(--color-green);
   width: 145px;
 }
 
@@ -561,7 +591,7 @@ body > div.point > .page_act {
 .warp_title {
   width: 66%;
   line-height: 1;
-  color: #fff;
+  color: var(--color-white);
   transition: 0.5s all;
   display: flex;
   flex-direction: column;
@@ -581,7 +611,7 @@ body > div.point > .page_act {
 .warp_title h3 {
   font-size: 17px;
   margin: 0;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .more {
@@ -589,8 +619,8 @@ body > div.point > .page_act {
   display: block;
   font-size: 18px;
   text-align: center;
-  color: #fff;
-  background: #fdd835;
+  color: var(--color-white);
+  background: var(--color-yellow);
   line-height: 40px;
   opacity: 0;
   transition: 0.5s all;
@@ -600,12 +630,15 @@ body > div.point > .page_act {
 #b_item_area:hover .more {
   opacity: 1;
 }
+
 #b_item_area:hover .warp_title {
   bottom: 40%;
 }
+
 #b_item_area:hover .b_item_img {
   filter: brightness(1);
 }
+
 /* --- 섹션-3  END --- */
 
 /* --- 섹션-4  START --- */
@@ -619,6 +652,7 @@ body > div.point > .page_act {
   position: relative;
   padding-top: 3%;
 }
+
 /* 텍스트 애니효과 START */
 .notice_ani {
   width: 32%;
@@ -668,6 +702,7 @@ body > div.point > .page_act {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 /* 텍스트 애니효과 END */
 /* 섹션-4 Swiper Slide START */
 .swiper {
@@ -714,12 +749,13 @@ body > div.point > .page_act {
 
 .notice_video {
   width: 100%;
+  height: 100%;
   color: #333;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4%;
+  padding-bottom: 7%;
 }
 
 .video_top {
@@ -826,6 +862,7 @@ dd.notice_title {
   border-top: #154360 solid 3px;
   background-color: rgba(222, 222, 222, 0.5);
 }
+
 dd.date {
   float: left;
   width: 100%;
@@ -857,9 +894,10 @@ dd.date {
 }
 
 .footer_info {
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.45rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-white);
+  line-height: 1.55rem;
 }
 
 .copyright {
@@ -870,7 +908,7 @@ dd.date {
   width: 11%;
   height: 54%;
   text-align: right;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .num_tel {
@@ -881,7 +919,7 @@ dd.date {
 
 .num_time {
   width: 100%;
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--color-white);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -889,4 +927,5 @@ dd.date {
   margin-top: 20px;
   padding-top: 20px;
 }
+
 /* --- 푸터 END --- */
