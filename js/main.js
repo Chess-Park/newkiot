@@ -1,5 +1,5 @@
 const HEADER_HEIGHT = 80; // 헤더 높이 설정
-const FOOTER_HEIGHT = "17rem" // 푸터 높이 설정
+const FOOTER_HEIGHT = '17rem'; // 푸터 높이 설정
 let pageLength; // 페이지 수 초기화
 let flag = true;
 let curPage = 1; // 현재 페이지 초기화 1
@@ -7,10 +7,10 @@ let curPage = 1; // 현재 페이지 초기화 1
 $(function () {
   pageStart();
   menuAct();
-})
+});
 
 function pageStart() {
-  const sections = $(".main_section");
+  const sections = $('.main_section');
   pageLength = sections.length; // 전체 페이지(<section>) 수
   if (isMobile()) {
     slideScreen(); // 모바일 터치 이벤트
@@ -25,15 +25,15 @@ function isMobile() {
 }
 
 function wheelAct() {
-  $(document).on("wheel", function (e) {
+  $(document).on('wheel', function (e) {
     let mouseVal = e.originalEvent.deltaY;
     screenMove(mouseVal);
-  })
+  });
 }
 
 function pageMove() {
-  let curTop = (window.innerHeight * (curPage - 1)) - (HEADER_HEIGHT * (curPage - 2)) ;
-  $(".section_con").css("transform", `translateY(-${curTop - HEADER_HEIGHT}px)`);
+  let curTop = window.innerHeight * (curPage - 1) - HEADER_HEIGHT * (curPage - 2);
+  $('.section_con').css('transform', `translateY(-${curTop - HEADER_HEIGHT}px)`);
   pointColor(curPage);
   if (curPage === pageLength) {
     touchFooter();
@@ -43,42 +43,42 @@ function pageMove() {
 }
 
 function touchFooter() {
-  const footer = $("#footer");
+  const footer = $('#footer');
   setTimeout(() => {
-    footer.css({"opacity": "1", "bottom": "0"});
-  }, 300)
+    footer.css({ opacity: '1', bottom: '0' });
+  }, 300);
 }
 
 function leaveFooter() {
-  const footer = $("#footer");
-  footer.css({"opacity": "0", "bottom": `-${FOOTER_HEIGHT}`});
+  const footer = $('#footer');
+  footer.css({ opacity: '0', bottom: `-${FOOTER_HEIGHT}` });
 }
 
 function pointColor() {
-  let point = $(".point_page");
-  point.removeClass("page_act");
+  let point = $('.point_page');
+  point.removeClass('page_act');
   let curPoint = $(`.point_page:nth-child(${curPage})`);
-  curPoint.addClass("page_act");
+  curPoint.addClass('page_act');
 }
 
 const pointClick = () => {
-  $(document).on("click", ".point_page", function () {
+  $(document).on('click', '.point_page', function () {
     curPage = $(this).index() + 1;
     pointColor();
     pageMove();
-  })
-}
+  });
+};
 
 function slideScreen() {
   let startY, endY;
-  window.document.body.addEventListener("touchstart", (e) => {
+  window.document.body.addEventListener('touchstart', (e) => {
     startY = e.changedTouches[0].screenY;
-  })
-  window.document.body.addEventListener("touchend", (e) => {
+  });
+  window.document.body.addEventListener('touchend', (e) => {
     endY = e.changedTouches[0].screenY;
     let mouseVal = startY - endY;
     screenMove(mouseVal);
-  })
+  });
 }
 
 function screenMove(mouseVal) {
@@ -91,7 +91,7 @@ function screenMove(mouseVal) {
       curPage++;
       pageMove(pageLength);
     }
-  } else if(mouseVal < 0) {
+  } else if (mouseVal < 0) {
     if (!(curPage <= 1)) {
       curPage--;
       pageMove(pageLength);
@@ -99,24 +99,23 @@ function screenMove(mouseVal) {
   }
   setTimeout(() => {
     flag = true;
-  }, 1000)
+  }, 1000);
 }
 
 // ---- 헤더 아코디언 js START ----
 function menuAct() {
-    let headerBoard = document.getElementsByClassName('menu_item');
+  let headerBoard = document.getElementsByClassName('menu_item');
 
-    for (i = 0; i < headerBoard.length; i++) {
-        headerBoard[i].addEventListener('mouseover', function () {
-            let boardChild = this.querySelector('.item_board');
-            boardChild.classList.add('board_act');
-        });
+  for (i = 0; i < headerBoard.length; i++) {
+    headerBoard[i].addEventListener('mouseover', function () {
+      let boardChild = this.querySelector('.item_board');
+      boardChild.classList.add('board_act');
+    });
 
-        headerBoard[i].addEventListener('mouseleave', function () {
-            let boardChild = this.querySelector('.item_board');
-            boardChild.classList.remove('board_act');
-        });
-    }
+    headerBoard[i].addEventListener('mouseleave', function () {
+      let boardChild = this.querySelector('.item_board');
+      boardChild.classList.remove('board_act');
+    });
+  }
 }
-
 // ---- 헤더 아코디언 js END ----

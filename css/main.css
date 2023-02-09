@@ -1,4 +1,7 @@
 /* --- 레이아웃 START --- */
+body {
+  font-family: 'Noto Sans KR', Nanum_BG, Nanum_BGB, NanumBarunGothicBold, 나눔고딕, '맑은 고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
+}
 #header {
   width: 100%;
   height: 5rem;
@@ -104,7 +107,6 @@ body > div.point > .page_act {
   height: 100%;
   position: relative;
   font-size: 18px;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -117,9 +119,28 @@ body > div.point > .page_act {
   height: 48px;
 }
 
-.menu_item:hover {
-  height: 48px;
-  border-bottom: 2px solid #c30d23;
+.underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #c30d23;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.item_category {
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
 }
 
 .item_category:hover {
@@ -133,6 +154,7 @@ body > div.point > .page_act {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+  transition: all 0.3s;
   display: none;
 }
 
@@ -258,19 +280,20 @@ body > div.point > .page_act {
 .index_btn {
   width: 200px;
   height: 48px;
-  border: 3px solid #007aff;
+  border: 3px solid #43403f;
   background: rgba(255, 255, 255, 0.25);
   line-height: 43px;
-  color: #fff !important;
+  color: #43403f !important;
 }
 
 .index_btn:hover {
   border: 3px solid #fff;
-  color: #fff;
+  color: #fff !important;
 }
 
 .index_btn.active {
-  border: 3px solid #fdd835;
+  border: 3px solid #c30d23;
+  color: #05305c !important;
 }
 
 .scroll-downs {
@@ -288,7 +311,7 @@ body > div.point > .page_act {
   width: 3px;
   padding: 10px 15px;
   height: 35px;
-  border: 3px solid red;
+  border: 3px solid #fff;
   border-radius: 25px;
   opacity: 1.75;
   box-sizing: content-box;
@@ -297,7 +320,7 @@ body > div.point > .page_act {
   width: 3px;
   height: 11px;
   border-radius: 25%;
-  background-color: red;
+  background-color: #fff;
   animation-name: scroll;
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.15, 0.41, 1.69, 0.94);
@@ -340,7 +363,7 @@ body > div.point > .page_act {
 }
 
 .info_title {
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: 600;
   color: #fff;
 }
@@ -358,6 +381,7 @@ body > div.point > .page_act {
 .info_btn {
   border: 2.5px solid #fff;
   font-size: 1.125rem;
+  font-weight: 500;
   cursor: pointer;
   padding: 12px 22px;
   text-align: center;
@@ -383,7 +407,6 @@ body > div.point > .page_act {
   position: relative;
   font-size: 16px;
   font-family: HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-  font-weight: bold;
   /* margin-top: 38rem; */
   /* top: 50%; */
 }
@@ -485,7 +508,7 @@ body > div.point > .page_act {
 }
 
 .business_title {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 600;
   color: #fff;
 }
@@ -500,7 +523,7 @@ body > div.point > .page_act {
   width: 100%;
   position: relative;
   color: #fff;
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 600;
   display: flex;
   flex-direction: row;
@@ -677,13 +700,13 @@ body > div.point > .page_act {
 }
 
 .swiper-pagination {
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 /* Swiper Slide END */
 
 .notice_btn {
   padding-bottom: 5px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   border-bottom: 1px solid #333;
   cursor: pointer;
@@ -691,13 +714,12 @@ body > div.point > .page_act {
 
 .notice_video {
   width: 100%;
-  height: 100%;
   color: #333;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7%;
+  padding-bottom: 4%;
 }
 
 .video_top {
@@ -708,7 +730,7 @@ body > div.point > .page_act {
   justify-content: space-evenly;
   gap: 40%;
   margin-bottom: 2%;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .video_bottom {
@@ -755,7 +777,8 @@ body > div.point > .page_act {
   align-items: center;
   justify-content: space-evenly;
   gap: 40%;
-  font-size: 18px;
+  margin-bottom: 1%;
+  font-size: 15px;
 }
 
 .news_title {
@@ -799,7 +822,7 @@ dd.notice_title {
   width: 100%;
   margin-top: 10px;
   font-size: 15px;
-  font-weight: 600;
+  line-height: 1.12rem;
   border-top: #154360 solid 3px;
   background-color: rgba(222, 222, 222, 0.5);
 }
@@ -834,10 +857,9 @@ dd.date {
 }
 
 .footer_info {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
   color: #fff;
-  line-height: 1.55rem;
+  line-height: 1.45rem;
 }
 
 .copyright {
