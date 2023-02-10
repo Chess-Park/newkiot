@@ -3,7 +3,7 @@
     --color-red: #c30d23;
     --color-green: #26a69a;
     --color-yellow: #ffee58;
-
+    --color-gray: #cccccc;
     --color-back-ground: #607d8b; /*right-bh color*/
     --color-white: #fff;
     --color-white-gray: #f2f3f4; /*page point color*/
@@ -82,8 +82,8 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background-color: var(--color-white-gray);
-    margin-bottom: 10px;
+    background-color: var(--color-gray);
+    margin-bottom: 6px;
     transition: all ease 500ms;
 }
 
@@ -603,6 +603,10 @@ body > div.point > .page_act {
     align-items: center;
 }
 
+.b_item_title {
+    min-width: 161px;
+}
+
 .b_item_line {
     border: 1.8px solid var(--color-green);
     width: 75%;
@@ -637,6 +641,7 @@ body > div.point > .page_act {
     gap: 15px;
     position: relative;
     bottom: 32%;
+    min-width: 164px;
 }
 
 .warp_title h4 {
@@ -679,7 +684,7 @@ body > div.point > .page_act {
 }
 
 #b_item_area:hover .warp_title {
-    bottom: 40%;
+    bottom: 42%;
 }
 
 #b_item_area:hover .b_item_img {
