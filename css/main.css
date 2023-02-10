@@ -196,7 +196,7 @@ body > div.point > .page_act {
     font-size: 16px;
 }
 
-.board li:hover {
+.board li a:hover {
     color: var(--color-red);
 }
 
@@ -568,6 +568,10 @@ body > div.point > .page_act {
 .busi-swiper {
     /* width: 100% !important;
     height: 100% !important; */
+}
+
+.swiper-backface-hidden {
+    min-width: 215px !important;
 }
 
 .busi-slide {
