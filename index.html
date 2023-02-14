@@ -584,31 +584,6 @@
                 $('.index_btn').removeClass('active');
                 $('.index_btn').eq(this.realIndex).addClass('active');
                 getSlideDataIndex(e);
-=======
-    $(function () {
-        const auto = new Swiper('.mySwiperr', {
-            // spaceBetween: 30,
-            direction: 'horizontal',
-            loop: true,
-            centeredSlides: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.auto-pagi',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.auto-next',
-                prevEl: '.auto-prev',
-            },
-            on: {
-                slideChange: function (e) {
-                    $('.index_btn').removeClass('active');
-                    $('.index_btn').eq(this.realIndex).addClass('active');
-                },
->>>>>>> 3f1a9e3e8fcf61d1f4c0e1eab1253bfec1c71564
             }
         });
 
@@ -618,7 +593,6 @@
             let index = $(`.swiper-wrapper > .${id}`).index();
             auto.slideTo(index);
         })
-    })
 
     function getSlideDataIndex(swipe) {
         var activeIndex = swipe.activeIndex;
