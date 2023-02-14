@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3cb1d64-da39-4942-9347-0012fd32ca34" name="Changes" comment="main.css main.js PJH_02.09">
+    <list default="true" id="e3cb1d64-da39-4942-9347-0012fd32ca34" name="Changes" comment="swiper.slideTo(index); not work 2023.02.14 PJH">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       <workItem from="1676008922918" duration="607000" />
       <workItem from="1676013421146" duration="606000" />
       <workItem from="1676254578599" duration="5355000" />
-      <workItem from="1676332842791" duration="5169000" />
+      <workItem from="1676332842791" duration="11529000" />
     </task>
     <task id="LOCAL-00001" summary="First PJH">
       <created>1675818550935</created>
@@ -83,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675904386793</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="swiper.slideTo(index); not work 2023.02.14 PJH">
+      <created>1676339708928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676339708928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First PJH" />
     <MESSAGE value="main.css main.js PJH_02.09" />
-    <option name="LAST_COMMIT_MESSAGE" value="main.css main.js PJH_02.09" />
+    <MESSAGE value="swiper.slideTo(index); not work 2023.02.14 PJH" />
+    <option name="LAST_COMMIT_MESSAGE" value="swiper.slideTo(index); not work 2023.02.14 PJH" />
   </component>
 </project>
