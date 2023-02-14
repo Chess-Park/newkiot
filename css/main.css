@@ -1,6 +1,7 @@
 :root {
     --color-blue: #05305c;
     --color-red: #c30d23;
+    --color-red-gray: #d15a5a;
     --color-green: #26a69a;
     --color-yellow: #ffee58;
     --color-gray: #cccccc;
@@ -90,7 +91,7 @@ body {
 body > div.point > .page_act {
     width: 15px;
     height: 15px;
-    background-color: var(--color-red) !important;
+    background-color: var(--color-red-gray) !important;
 }
 
 /* --- 레이아웃 END --- */
@@ -264,7 +265,7 @@ body > div.point > .page_act {
 /* 섹션-1 AutoPlay END */
 .swiper_title {
     width: 100%;
-    top: 35%;
+    top: 25%;
     color: var(--color-white);
     font-size: 3em;
     font-weight: bold;
@@ -280,7 +281,7 @@ body > div.point > .page_act {
 } */
 
 .swiper_title1 {
-    margin-bottom: 3%;
+    margin-bottom: 1%;
 }
 
 .swiper_btn {
@@ -292,7 +293,7 @@ body > div.point > .page_act {
     font-size: 18px;
     font-weight: bold;
     line-height: 49px;
-    bottom: 15%;
+    bottom: 21%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -305,19 +306,19 @@ body > div.point > .page_act {
 .index_btn {
     width: 200px;
     height: 48px;
-    border: 3px solid var(--color-blue);
+    border: 3px solid var(--color-white);
     background: rgba(255, 255, 255, 0.25);
     line-height: 43px;
     color: var(--color-white) !important;
 }
 
 .index_btn:hover {
-    border: 3px solid var(--color-white);
-    color: var(--color-white);
+    border: 3px solid var(--color-red-gray);
+    color: var(--color-red-gray) !important;
 }
 
 .index_btn.active {
-    border: 3px solid var(--color-green);
+    border: 3px solid var(--color-red-gray);
 }
 
 .scroll-downs {
@@ -419,8 +420,8 @@ body > div.point > .page_act {
 }
 
 .info_btn:hover {
-    border: 3px solid var(--color-green);
-    color: var(--color-green);
+    border: 3px solid var(--color-red-gray);
+    color: var(--color-red-gray);
 }
 
 /* 상담문의, 홍보영상, 보도자료 버튼 효과 START */
@@ -485,7 +486,7 @@ body > div.point > .page_act {
     stroke-width: 6px;
     stroke-dashoffset: 0;
     /* stroke: #06d6a0; */
-    stroke: var(--color-green);
+    stroke: var(--color-blue);
     /* animation: dash 2s linear; */
 }
 
@@ -612,7 +613,7 @@ body > div.point > .page_act {
 }
 
 .b_item_line {
-    border: 1.8px solid var(--color-green);
+    border: 1.8px solid var(--color-red-gray);
     width: 75%;
 }
 
@@ -676,7 +677,7 @@ body > div.point > .page_act {
     font-size: 18px;
     text-align: center;
     color: var(--color-white) !important;
-    background: var(--color-green);
+    background: var(--color-red-gray);
     line-height: 40px;
     opacity: 0;
     transition: 0.5s all;
