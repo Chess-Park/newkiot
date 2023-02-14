@@ -107,12 +107,12 @@
                     </div>
                     <div class="swiper-button-next auto-next"></div>
                     <div class="swiper-button-prev auto-prev"></div>
-                    <!--                    <div class="swiper-pagination auto-pagi"></div>-->
+                    <div class="swiper-pagination auto-pagi"></div>
                 </div>
                 <div class="swiper_btn">
-                    <span class="index_btn btn_0">(주)KIOT</span>
-                    <span class="index_btn btn_1">고도의 AI기술력</span>
-                    <span class="index_btn btn_2">만족하는 결과</span>
+                    <span id="main1" class="index_btn btn_0">(주)KIOT</span>
+                    <span id="main2" class="index_btn btn_1">고도의 AI기술력</span>
+                    <span id="main3" class="index_btn btn_2">만족하는 결과</span>
                 </div>
                 <div class="scroll-downs">
                     <div class="mousey">
@@ -562,34 +562,42 @@
 
 <!-- 섹션-1 AutoPlay -->
 <script>
-    const auto = new Swiper('.mySwiperr', {
-        // spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        on: {
-            slideChange: function (e) {
-                $('.index_btn').removeClass('active');
-                $('.index_btn').eq(this.realIndex).addClass('active');
-                getSlideDataIndex(e);
+    $(function () {
+        const auto = new Swiper('.mySwiperr', {
+            // spaceBetween: 30,
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.auto-pagi',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.auto-next',
+                prevEl: '.auto-prev',
+            },
+            on: {
+                slideChange: function (e) {
+                    $('.index_btn').removeClass('active');
+                    $('.index_btn').eq(this.realIndex).addClass('active');
+                },
             }
-        }
-    });
+        });
+
+
+        $('.swiper_btn > span').click(function () {
+            let id = $(this).attr('id');
+            let index = $(`.swiper-wrapper > .${id}`).index();
+            auto.slideTo(index);
+        })
+    })
 
     function getSlideDataIndex(swipe) {
         var activeIndex = swipe.activeIndex;
-        console.log('first : ' + activeIndex);
         var slidesLen = swipe.slides.length;
         if (swipe.params.loop) {
             switch (swipe.activeIndex) {
@@ -603,15 +611,10 @@
                     --activeIndex;
             }
         }
-        console.log(activeIndex);
+        console.log(swipe.activeIndex);
         // return activeIndex;
     }
 
-        $('.swiper_btn > span').click(function() {
-            let index = $(this).index();
-            console.log(index);
-            auto.slideTo(index + 1);
-        })
 </script>
 
 <!-- 섹션-3 breakpoints -->
