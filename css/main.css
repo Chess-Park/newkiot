@@ -310,6 +310,8 @@ body > div.point > .page_act {
     background: rgba(255, 255, 255, 0.25);
     line-height: 43px;
     color: var(--color-white) !important;
+    user-select: none;
+    cursor: pointer;
 }
 
 .index_btn:hover {

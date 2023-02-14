@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3cb1d64-da39-4942-9347-0012fd32ca34" name="Changes" comment="main.js 수정 02.08">
+    <list default="true" id="e3cb1d64-da39-4942-9347-0012fd32ca34" name="Changes" comment="main.css main.js PJH_02.09">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -35,6 +36,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP8" />
   <component name="ProjectId" id="2L78E0jCmDl3GGDGMSBN2SjYSOv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -60,6 +62,12 @@
       <updated>1675210644733</updated>
       <workItem from="1675210648778" duration="12168000" />
       <workItem from="1675228772641" duration="3937000" />
+      <workItem from="1675916226373" duration="6000" />
+      <workItem from="1675927030155" duration="3011000" />
+      <workItem from="1676008922918" duration="607000" />
+      <workItem from="1676013421146" duration="606000" />
+      <workItem from="1676254578599" duration="5355000" />
+      <workItem from="1676332842791" duration="5169000" />
     </task>
     <task id="LOCAL-00001" summary="First PJH">
       <created>1675818550935</created>
@@ -68,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675818550935</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="main.css main.js PJH_02.09">
+      <created>1675904386793</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675904386793</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First PJH" />
-    <option name="LAST_COMMIT_MESSAGE" value="First PJH" />
+    <MESSAGE value="main.css main.js PJH_02.09" />
+    <option name="LAST_COMMIT_MESSAGE" value="main.css main.js PJH_02.09" />
   </component>
 </project>
