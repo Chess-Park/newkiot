@@ -265,7 +265,7 @@ body > div.point > .page_act {
 /* 섹션-1 AutoPlay END */
 .swiper_title {
     width: 100%;
-    top: 25%;
+    top: 20%;
     color: var(--color-white);
     font-size: 3em;
     font-weight: bold;
@@ -276,12 +276,20 @@ body > div.point > .page_act {
     position: absolute;
 }
 
-/* .swiper_title p {
-    text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333;
-} */
-
 .swiper_title1 {
     margin-bottom: 1%;
+}
+
+.swiper_title3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.title_line {
+    width: 50%;
+    height: 3px;
+    margin: 15px;
+    background-color: var(--color-white);
 }
 
 .swiper_btn {
@@ -293,7 +301,7 @@ body > div.point > .page_act {
     font-size: 18px;
     font-weight: bold;
     line-height: 49px;
-    bottom: 21%;
+    bottom: 25%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -391,7 +399,7 @@ body > div.point > .page_act {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     color: var(--color-white);
     margin-top: 5%;
 }
@@ -529,7 +537,7 @@ body > div.point > .page_act {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 65px;
+    gap: 80px;
     position: relative;
     padding-right: 2rem;
 }
@@ -539,7 +547,7 @@ body > div.point > .page_act {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     color: var(--color-white);
     margin-top: 10%;
 }
@@ -554,6 +562,10 @@ body > div.point > .page_act {
     text-align: center;
     font-size: 1.125rem;
     line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .business_item {
@@ -611,7 +623,7 @@ body > div.point > .page_act {
 }
 
 .b_item_title {
-    min-width: 161px;
+    min-width: 165px;
 }
 
 .b_item_line {
@@ -648,12 +660,12 @@ body > div.point > .page_act {
     gap: 15px;
     position: relative;
     bottom: 32%;
-    min-width: 164px;
+    min-width: 170px;
 }
 
 .warp_title h4 {
     min-height: 80px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     line-height: 16px;
     text-align: center;
@@ -667,11 +679,11 @@ body > div.point > .page_act {
     text-align: center;
 } */
 
-.warp_title h3 {
-    font-size: 17px;
+/* .warp_title2 {
+    font-size: 17px !important;
     margin: 0;
     color: var(--color-white);
-}
+} */
 
 .more {
     width: 120px;
@@ -692,6 +704,10 @@ body > div.point > .page_act {
 
 #b_item_area:hover .warp_title {
     bottom: 42%;
+    color: var(--color-blue);
+    font-weight: bold;
+    background: linear-gradient(to top, transparent -50%, #fafafa 70%);
+    border-radius: 1px;
 }
 
 #b_item_area:hover .b_item_img {
